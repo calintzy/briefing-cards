@@ -4,35 +4,43 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>오늘의 AI 심화 분석 프롬프트</title>
+<title>오늘의 AI 심화 분석 프롬프트 — 2026-07-24</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
     font-family: "Apple SD Gothic Neo", "Noto Sans KR", -apple-system, sans-serif;
-    background: #FAF7F0; color: #111; line-height: 1.6;
-    padding: 20px 16px 48px; -webkit-text-size-adjust: 100%;
+    background: #FAF7F0;
+    color: #111;
+    line-height: 1.6;
+    padding: 20px 16px 48px;
+    -webkit-text-size-adjust: 100%;
   }
   .wrap { max-width: 640px; margin: 0 auto; }
   .bar { height: 8px; background: #F5B82E; margin-bottom: 24px; }
-  .eyebrow { font-size: 13px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.45; margin-bottom: 8px; }
+  .eyebrow {
+    font-size: 13px; font-weight: 800; letter-spacing: 0.14em;
+    text-transform: uppercase; opacity: 0.45; margin-bottom: 8px;
+  }
   h1 { font-size: 26px; font-weight: 900; line-height: 1.25; word-break: keep-all; }
   .date { font-size: 15px; font-weight: 600; opacity: 0.55; margin-top: 8px; }
   .copy-btn {
-    display: block; width: 100%; margin: 24px 0; padding: 20px;
-    background: #F5B82E; color: #111; border: 3px solid #111; border-radius: 0;
-    font-size: 20px; font-weight: 900; letter-spacing: 0.02em; cursor: pointer;
+    display: block; width: 100%;
+    margin: 24px 0; padding: 20px;
+    background: #F5B82E; color: #111;
+    border: 3px solid #111; border-radius: 0;
+    font-size: 20px; font-weight: 900; letter-spacing: 0.02em;
+    cursor: pointer;
   }
   .copy-btn:active { transform: translateY(1px); }
   .copy-btn.done { background: #111; color: #F5B82E; }
   pre {
-    background: #fff; border: 2px solid #111; padding: 18px 16px;
+    background: #fff; border: 2px solid #111;
+    padding: 18px 16px;
     font-family: "Apple SD Gothic Neo", "Noto Sans KR", monospace;
-    font-size: 15px; line-height: 1.7; white-space: pre-wrap; word-break: break-word; color: #111;
+    font-size: 15px; line-height: 1.7;
+    white-space: pre-wrap; word-break: break-word;
+    color: #111;
   }
-  h2 { font-size: 16px; font-weight: 800; margin: 36px 0 12px; }
-  ul { list-style: none; }
-  li { border-bottom: 1px solid rgba(17,17,17,0.12); }
-  li a { display: block; padding: 12px 4px; color: #111; text-decoration: none; font-size: 16px; font-weight: 600; }
   .foot { margin-top: 28px; font-size: 13px; opacity: 0.5; text-align: center; }
 </style>
 </head>
@@ -58,19 +66,7 @@ https://openai.com/index/hugging-face-model-evaluation-security-incident/
 
 내 상황: [여기에 한 줄 — 예: Next.js 웹서비스 운영 / 파이썬 자동매매 봇 / 사내 AI 도입 검토 중]
 
-내가 구축한 시스템과 작업 설계 안에서, 이 정보들이 가져올 장점과 단점을 뉴스별로 정리해줘. 링크를 열 수 있으면 원문까지 반영하고, 마지막에 "이번 주에 해볼 것"을 1~2개 뽑아줘.
-</pre>
-
-  <h2>최근 프롬프트</h2>
-  <ul>
-    <li><a href="./2026-07-24/">2026-07-24</a></li>
-    <li><a href="./2026-07-23/">2026-07-23</a></li>
-    <li><a href="./2026-07-22/">2026-07-22</a></li>
-    <li><a href="./2026-07-21/">2026-07-21</a></li>
-    <li><a href="./2026-07-20/">2026-07-20</a></li>
-    <li><a href="./2026-07-19/">2026-07-19</a></li>
-    <li><a href="./2026-07-18/">2026-07-18</a></li>
-  </ul>
+내가 구축한 시스템과 작업 설계 안에서, 이 정보들이 가져올 장점과 단점을 뉴스별로 정리해줘. 링크를 열 수 있으면 원문까지 반영하고, 마지막에 "이번 주에 해볼 것"을 1~2개 뽑아줘.</pre>
 
   <div class="foot">내일 아침에 또 옵니덬 🦆</div>
 </div>
@@ -81,17 +77,25 @@ https://openai.com/index/hugging-face-model-evaluation-security-incident/
   var text = pre.textContent;
   btn.addEventListener("click", function () {
     function ok() {
-      btn.textContent = "복사됨!"; btn.classList.add("done");
-      setTimeout(function () { btn.textContent = "전체 복사"; btn.classList.remove("done"); }, 2000);
+      btn.textContent = "복사됨!";
+      btn.classList.add("done");
+      setTimeout(function () {
+        btn.textContent = "전체 복사";
+        btn.classList.remove("done");
+      }, 2000);
     }
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(text).then(ok, selectFallback);
-    } else { selectFallback(); }
+    } else {
+      selectFallback();
+    }
     function selectFallback() {
+      // 폴백: 텍스트 블록 선택 (사용자가 수동 복사)
       var range = document.createRange();
       range.selectNodeContents(pre);
       var sel = window.getSelection();
-      sel.removeAllRanges(); sel.addRange(range);
+      sel.removeAllRanges();
+      sel.addRange(range);
     }
   });
 </script>
