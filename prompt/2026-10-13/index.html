@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>오늘의 AI 심화 분석 프롬프트 — 2026-10-13</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Apple SD Gothic Neo", "Noto Sans KR", -apple-system, sans-serif;
+    background: #FAF7F0;
+    color: #111;
+    line-height: 1.6;
+    padding: 20px 16px 48px;
+    -webkit-text-size-adjust: 100%;
+  }
+  .wrap { max-width: 640px; margin: 0 auto; }
+  .bar { height: 8px; background: #F5B82E; margin-bottom: 24px; }
+  .eyebrow {
+    font-size: 13px; font-weight: 800; letter-spacing: 0.14em;
+    text-transform: uppercase; opacity: 0.45; margin-bottom: 8px;
+  }
+  h1 { font-size: 26px; font-weight: 900; line-height: 1.25; word-break: keep-all; }
+  .date { font-size: 15px; font-weight: 600; opacity: 0.55; margin-top: 8px; }
+  .copy-btn {
+    display: block; width: 100%;
+    margin: 24px 0; padding: 20px;
+    background: #F5B82E; color: #111;
+    border: 3px solid #111; border-radius: 0;
+    font-size: 20px; font-weight: 900; letter-spacing: 0.02em;
+    cursor: pointer;
+  }
+  .copy-btn:active { transform: translateY(1px); }
+  .copy-btn.done { background: #111; color: #F5B82E; }
+  pre {
+    background: #fff; border: 2px solid #111;
+    padding: 18px 16px;
+    font-family: "Apple SD Gothic Neo", "Noto Sans KR", monospace;
+    font-size: 15px; line-height: 1.7;
+    white-space: pre-wrap; word-break: break-word;
+    color: #111;
+  }
+  .foot { margin-top: 28px; font-size: 13px; opacity: 0.5; text-align: center; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="bar"></div>
+  <div class="eyebrow">TODAYS.AI.BRIEF</div>
+  <h1>오늘의 심화 분석 프롬프트</h1>
+  <div class="date">2026-10-13</div>
+
+  <button class="copy-btn" id="copyBtn" type="button">전체 복사</button>
+
+  <pre id="promptText">아래는 오늘(2026-10-13)의 AI 뉴스 5건이야.
+
+① Claude Haiku 5.5 — 에이전트 비용 90% 절감 — 서브에이전트 워크 최적화 소형 모델 출시
+https://www.anthropic.com/news
+② Cloudflare, Deno 인수 — Deploy 종료 — Workers 셀프호스팅 확대, Deno Deploy 6개월 내 종료
+https://blog.cloudflare.com/deno-joins-cloudflare/
+③ a16z AI 앱 Top 100 — Claude 웹 3위 — 7th edition, Max 플랜 구독 비율 ChatGPT 대비 7배
+https://a16z.com/100-gen-ai-apps-6/
+④ QGIS AI 기여 금지 논의 본격화 — 오픈소스 바이브코딩 제한, GDAL 정책 참고
+https://lists.osgeo.org/pipermail/qgis-developer/2026-June/068364.html
+⑤ ppt-master — 문서를 편집 가능 PPT로 — PDF·DOCX를 네이티브 PowerPoint로 변환하는 AI 오픈소스
+https://github.com/hugohe3/ppt-master
+
+내 상황: [여기에 한 줄 — 예: Next.js 웹서비스 운영 / 파이썬 자동매매 봇 / 사내 AI 도입 검토 중]
+
+내가 구축한 시스템과 작업 설계 안에서, 이 정보들이 가져올 장점과 단점을 뉴스별로 정리해줘. 링크를 열 수 있으면 원문까지 반영하고, 마지막에 "이번 주에 해볼 것"을 1~2개 뽑아줘.</pre>
+
+  <div class="foot">내일 아침에 또 옵니덬 🦆</div>
+</div>
+
+<script>
+  var btn = document.getElementById("copyBtn");
+  var pre = document.getElementById("promptText");
+  var text = pre.textContent;
+  btn.addEventListener("click", function () {
+    function ok() {
+      btn.textContent = "복사됨!";
+      btn.classList.add("done");
+      setTimeout(function () {
+        btn.textContent = "전체 복사";
+        btn.classList.remove("done");
+      }, 2000);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(ok, selectFallback);
+    } else {
+      selectFallback();
+    }
+    function selectFallback() {
+      // 폴백: 텍스트 블록 선택 (사용자가 수동 복사)
+      var range = document.createRange();
+      range.selectNodeContents(pre);
+      var sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range);
+    }
+  });
+</script>
+</body>
+</html>
