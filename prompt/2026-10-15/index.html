@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>오늘의 AI 심화 분석 프롬프트 — 2026-10-15</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Apple SD Gothic Neo", "Noto Sans KR", -apple-system, sans-serif;
+    background: #FAF7F0;
+    color: #111;
+    line-height: 1.6;
+    padding: 20px 16px 48px;
+    -webkit-text-size-adjust: 100%;
+  }
+  .wrap { max-width: 640px; margin: 0 auto; }
+  .bar { height: 8px; background: #F5B82E; margin-bottom: 24px; }
+  .eyebrow {
+    font-size: 13px; font-weight: 800; letter-spacing: 0.14em;
+    text-transform: uppercase; opacity: 0.45; margin-bottom: 8px;
+  }
+  h1 { font-size: 26px; font-weight: 900; line-height: 1.25; word-break: keep-all; }
+  .date { font-size: 15px; font-weight: 600; opacity: 0.55; margin-top: 8px; }
+  .copy-btn {
+    display: block; width: 100%;
+    margin: 24px 0; padding: 20px;
+    background: #F5B82E; color: #111;
+    border: 3px solid #111; border-radius: 0;
+    font-size: 20px; font-weight: 900; letter-spacing: 0.02em;
+    cursor: pointer;
+  }
+  .copy-btn:active { transform: translateY(1px); }
+  .copy-btn.done { background: #111; color: #F5B82E; }
+  pre {
+    background: #fff; border: 2px solid #111;
+    padding: 18px 16px;
+    font-family: "Apple SD Gothic Neo", "Noto Sans KR", monospace;
+    font-size: 15px; line-height: 1.7;
+    white-space: pre-wrap; word-break: break-word;
+    color: #111;
+  }
+  .foot { margin-top: 28px; font-size: 13px; opacity: 0.5; text-align: center; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="bar"></div>
+  <div class="eyebrow">TODAYS.AI.BRIEF</div>
+  <h1>오늘의 심화 분석 프롬프트</h1>
+  <div class="date">2026-10-15</div>
+
+  <button class="copy-btn" id="copyBtn" type="button">전체 복사</button>
+
+  <pre id="promptText">아래는 오늘(2026-10-15)의 AI 뉴스 6건이야.
+
+① Anthropic, Git 버리고 Scion 도입 — AI 코딩이 만든 대용량 커밋 문제
+https://www.anthropic.com/engineering/redesigning-source-control
+② AI 에이전트 보안, 기초가 빠져있다 — 프런티어 연구소들도 기본 점검 건너뜀
+https://www.csoonline.com/article/4234854/ai-agents-arent-going-rogue-frontier-labs-are-skipping-security-basics.html
+③ Higgsfield, AI 영상 10분+ 돌파 — 숏폼 한계 넘어 유튜브 길이로
+https://openai.com/index/higgsfield-longer-videos-voice
+④ Amp, 코딩 너머 전방위 AI 에이전트 — 문서·이메일·일정까지 자동화
+https://openai.com/index/amp-beyond-coding
+⑤ pg_vectorsearch, pgvector보다 빠름 — Supabase 스택 드랍인 대체재
+https://github.com/timescale/pg_vectorsearch
+⑥ Character.ai 파산신청, 챗봇 판 재편 — API 기반 솔루션으로 수요 이동 신호
+https://news.hada.io/topic?id=35307
+
+내 상황: [여기에 한 줄 — 예: Next.js 웹서비스 운영 / 파이썬 자동매매 봇 / 사내 AI 도입 검토 중]
+
+내가 구축한 시스템과 작업 설계 안에서, 이 정보들이 가져올 장점과 단점을 뉴스별로 정리해줘. 링크를 열 수 있으면 원문까지 반영하고, 마지막에 "이번 주에 해볼 것"을 1~2개 뽑아줘.</pre>
+
+  <div class="foot">내일 아침에 또 옵니덬 🦆</div>
+</div>
+
+<script>
+  var btn = document.getElementById("copyBtn");
+  var pre = document.getElementById("promptText");
+  var text = pre.textContent;
+  btn.addEventListener("click", function () {
+    function ok() {
+      btn.textContent = "복사됨!";
+      btn.classList.add("done");
+      setTimeout(function () {
+        btn.textContent = "전체 복사";
+        btn.classList.remove("done");
+      }, 2000);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(ok, selectFallback);
+    } else {
+      selectFallback();
+    }
+    function selectFallback() {
+      // 폴백: 텍스트 블록 선택 (사용자가 수동 복사)
+      var range = document.createRange();
+      range.selectNodeContents(pre);
+      var sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range);
+    }
+  });
+</script>
+</body>
+</html>
